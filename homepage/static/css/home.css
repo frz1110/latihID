@@ -63,9 +63,21 @@
     font-size: 18px;
 }
 
+p#judul{
+    font-size: 22px;
+}
+ p{
+    font-size: 16px;
+}
+
 .alasan div img{
     width: 130px ;
     height: 130px ;
+}
+
+.icon{
+    width: 70px ;
+    height: 70px ;
 }
 
 .garis-judul{
@@ -73,6 +85,41 @@
     height: 3px !important;
     width:60px;
     background-color:#FF6A0E;
+  }
+
+  .program1{
+    background-color:#AEDEE9;
+    border-radius: 8px;
+ 
+  }
+
+  .program2{
+    background-color: #D7EBEF;
+    border-radius: 8px;
+  }
+
+ 
+  .kolaborasi{
+    
+  
+    color: #fff;
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+
+   
+  
+    
+  }
+
+ 
+
+  .kolaborasi .isi{
+    
+  
+    margin:25px;
+    
+    
   }
 
 @media (max-width:650px){
@@ -96,6 +143,20 @@
 
       .alasan div p{
         margin: 0px 40px;
+    }
+     .program2{
+         text-align: center;
+        
+     }
+
+     .program2 p{
+        text-align: center;
+        margin-right: 20px;
+    }
+
+     .kolaborasi{
+        text-align: center;
+        
     }
       
   }
