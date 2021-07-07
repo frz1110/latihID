@@ -55,7 +55,7 @@ ROOT_URLCONF = 'latihid.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'latihid.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3ps3tpc31nld',
-        'USER': 'gvmulfczxncesl',
-        'PASSWORD': '1e7b7082beea9355d9821ed7195e4acaadc5f8d680e2a63bbbaea9e80d6cecad',
-        'HOST': 'ec2-54-227-246-76.compute-1.amazonaws.com',
+        'NAME': 'dc3nira2ous3sq',
+        'USER': 'xpyvanjcswmfvp',
+        'PASSWORD': 'c92a67d2adcb3b6af5a302bf2e49108ff0f1c637fa6f494dcdcf8533264a2002',
+        'HOST': 'ec2-23-21-4-7.compute-1.amazonaws.com',
         'PORT': '5432',
         'CONN_MAX_AGE':10
     }
@@ -126,3 +126,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+
+# Make sure the directories exist to prevent errors when doing `collectstatic`.
+for directory in [*STATICFILES_DIRS, STATIC_ROOT]:
+    directory.mkdir(exist_ok=True)
+
+# Enable compression and caching features of whitenoise.
+# You can remove this if it causes problems on your setup.
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
