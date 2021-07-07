@@ -21,6 +21,9 @@
     text-decoration: none !important;
   }
 
+
+
+ 
   .prev:hover, .next:hover {
     background-color: white;
     color:  inherit;
@@ -39,11 +42,12 @@
 
   .search input[type=text] {
     height: 45px;
-    width: 750px;
+    width: 700px;
     margin-bottom: 10px;
     border: 1px solid rgba(0,0,0,0.5);
     border-radius: 5px;
     font-size: 16px;
+    position: relative;
     
   }
   .button3{
@@ -54,4 +58,45 @@
     border:0;
     height: 45px;
 }
+
+.alasan div p{
+    font-size: 18px;
+}
+
+.alasan div img{
+    width: 130px ;
+    height: 130px ;
+}
+
+.garis-judul{
+    border:0;
+    height: 3px !important;
+    width:60px;
+    background-color:#FF6A0E;
+  }
+
+@media (max-width:650px){
+    .prev, .next{
+      top:20%;
+    }
+
+    .search input[type=text] {
+        
+        width: 200px;
+        font-size: 12px;
+        height: 35px;
+    
+        
+      }
+      .button3{
+        height: 35px;
+        width:80px;
+        font-size: 12px;
+      }
+
+      .alasan div p{
+        margin: 0px 40px;
+    }
+      
+  }
 
