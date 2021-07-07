@@ -1,7 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block meta %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+{% endblock %}
 
 {% block content %}
-<h1>HELLO WORLD!</h1>
+<div class="banner">
+    <div class="slides">
+        <img src="{% static 'img/banner1.png' %}" style="width:100%">
+    </div>
+    <div class="slides">
+        <img src="{% static 'img/banner2.png' %}" style="width:100%">
+    </div>
+    <div class="slides">
+        <img src="{% static 'img/banner3.png' %}" style="width:100%">
+    </div>
+    <div class="slides">
+        <img src="{% static 'img/banner4.jpg' %}" style="width:100%">
+    </div>
+    <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlides(1)">&#10095;</a>
+</div>
+<div style="background-color:#AEDEE9;" class="search">
+    
+    <br><br>
+    <div class="row justify-content-center" >
+    <input type="text" placeholder=" Cari Kelas Manajemen Operasional">
+    <button class="button3"><i class="fas fa-search"></i> Search</button>
+    </div>
+</div>
 {% endblock %}
+{% block customScript %}
+<script type="text/javascript" src="{% static 'js/home.js' %}"></script>
+{% endblock customScript %}

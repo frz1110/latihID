@@ -1,0 +1,57 @@
+.slides{
+    display: none;
+   
+}
+.banner{
+    margin-top: 60px;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+    background-color: rgba(0,0,0,0.2);
+    position: absolute;
+    top: 50%;
+    
+    padding: 0 8px;
+    color:  rgba(0,0,0,0.5);
+    font-weight: bold;
+    border-radius: 50%;
+    user-select: none;
+    text-decoration: none !important;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: white;
+    color:  inherit;
+  }
+
+  .next {
+    right: 0;
+    margin-right: 30px;
+
+  }
+
+  .prev {
+    margin-left: 30px;
+
+  }
+
+  .search input[type=text] {
+    height: 45px;
+    width: 750px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,0.5);
+    border-radius: 5px;
+    font-size: 16px;
+    
+  }
+  .button3{
+    background-color:#FF6A0E;
+    border-radius: 5px;
+    color:white;
+    width:150px;
+    border:0;
+    height: 45px;
+}
+
