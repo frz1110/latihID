@@ -82,9 +82,10 @@ footer a:hover{
 
 @media  (max-width:600px){
     #menu{
-      margin-left: 50px;
-      
+      margin-left: 50px;  
     }
-   
+    #dsc-footer p{
+        margin-left: 40px;
+      }
   }
   
