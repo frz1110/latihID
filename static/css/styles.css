@@ -23,7 +23,9 @@
     color:black;
 }
 
-
+.auth{
+    margin-left: 100px;
+}
 .button1{
     background-color:#FF6A0E;
     border-radius: 12px;
@@ -78,9 +80,11 @@ footer a:hover{
     color:inherit;
 }
 
-@media only screen and (max-width:600px){
-    #dsc-footer p{
-      margin-left: 40px;
+@media  (max-width:600px){
+    #menu{
+      margin-left: 50px;
+      
     }
+   
   }
   

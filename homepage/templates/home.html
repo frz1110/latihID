@@ -23,15 +23,13 @@
     <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
     <a class="next" onclick="moveSlides(1)">&#10095;</a>
 </div>
-<div style="background-color:#AEDEE9;" class="search">
-    
+<div style="background-color:#AEDEE9;" class="search ">
     <br>
- 
     <div class="row justify-content-center" >
     <input type="text" placeholder=" Cari Kelas Manajemen Operasional">
     <button class="button3"><i class="fas fa-search"></i> Search</button>
-    
-</div>
+    </div>
+    <br>
 </div>
 <div class="container mt-5 " id="keunggulan">
     <h2 class="text-center"  style="color: #163F5B; font-weight: 550;">Kenapa Memilih LatihID?</h2>
@@ -73,17 +71,32 @@
 </div>
 
 <div class="container">
-    <div class=" mt-3 program1">
+    <div class=" container mt-3 program1">
+        
         <br>
         <img class="center icon" src="{% static 'img\gratis-icon.svg' %}">
         <p class="text-center mt-3" id="judul" ><b>Kelas Gratis Terpopuler</b></p>
         <div class="text-center">
             <button class="button2">Lihat Modul Lainnya &#10095;</button>
         </div>
+      
+        <div class="row justify-content-center">
+            {% for i in modul_terpopuler %}
+            <div class="card" style="width: 15rem; height: 15rem;">
+
+                <img class="card-img-top" src="{% static 'img/banner1.png' %}" alt="Card image cap">
+                <div class="card-body">
+                  <p >{{ i.1 }}<br><br>Gratis</p>
+                </div>   
+            </div>
+            {% endfor %}
+        </div>
+       
         
     </div>
 
     <div class=" mt-5 program2">
+        <div class="container">
         <br>
         <div class="row">
             <div class="col-md-4 ml-3">
@@ -92,11 +105,24 @@
                 <p>Kelas-kelas pelatihan LatihID yang relevan dengan tren terbaru di lapangan atau dunia usaha.</p>
                 <button class="button2 mb-4">Lihat Modul Lainnya &#10095;</button>
             </div>
+            {% for i in modul_terbaru %}
+            <div class="col-md-3 ">
+                <div class="card" style="width: 15rem; height: 15rem;">
+
+                    <img class="card-img-top" src="{% static 'img/banner1.png' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <p >{{ i.1 }}<br><br>Gratis</p>
+                    </div>   
+                </div>
+            </div>
+            {% endfor %}
+        </div>
         </div>
     </div>
 
     <div class=" mt-5 program2">
         <br>
+        <div class="container">
         <div class="row">
             <div class="col-md-4 ml-3">
                 <img class="icon" src="{% static 'img\expert-icon.svg' %}">
@@ -104,6 +130,18 @@
                 <p>Kelas dengan harga yang terjangkau, dan penjelasan materi yang lebih rinci. Jangan sampai kelewatan, dan akses kelasnya sekarang.</p>
                 <button class="button2 mb-4">Lihat Modul Lainnya &#10095;</button>
             </div>
+            {% for i in modul_expert %}
+            <div class="col-md-3 modul-terbaru">
+                <div class="card" style="width: 15rem; height: 15rem;">
+
+                    <img class="card-img-top" src="{% static 'img/banner1.png' %}" alt="Card image cap">
+                    <div class="card-body">
+                      <p >{{ i.1 }}<br><br>{{ i.2 }}</p>
+                    </div>   
+                </div>
+            </div>
+            {% endfor %}
+        </div>
         </div>
 </div>
 
@@ -116,6 +154,7 @@
 <h2 class="text-center mt-5"  style="color: #163F5B; font-weight: 550;">Kelas Untuk menambah Keterampilan Anda</h2>
 <hr class="garis-judul" style="margin-bottom:85px;">
 <div class=" mt-5 program2">
+    <div class="container">
     <br>
     <div class="row">
         <div class="col-md-4 ml-3">
@@ -124,9 +163,22 @@
             <p>Kelas-kelas yang tepat untuk kamu, yang ingin belajar cara memulai bisnis. Kamu akan mempelajari materi-materi dasar dari mencari, mengembangkan, sampai mengimplementasikan ide bisnis dengan modul-modul di bawah ini.</p>
             <button class="button2 mb-4">Lihat Modul Lainnya &#10095;</button>
         </div>
+        {% for i in modul_bisnis %}
+        <div class="col-md-3 modul-terbaru">
+            <div class="card" style="width: 15rem; height: 15rem;">
+
+                <img class="card-img-top" src="{% static 'img/banner1.png' %}" alt="Card image cap">
+                <div class="card-body">
+                  <p >{{ i.1 }}<br><br>Gratis</p>
+                </div>   
+            </div>
+        </div>
+        {% endfor %}
+    </div>
     </div>
 </div>
 <div class=" mt-5 program2">
+    <div class="container">
     <br>
     <div class="row">
         <div class="col-md-4 ml-3">
@@ -135,9 +187,22 @@
             <p>Ingin usaha rintisan kamu lebih terkenal di mata publik? Ikuti kelas-kelas pemasaran dengan modul-modul di bawah ini, untuk mewujudkan keinginan tersebut!</p>
             <button class="button2 mb-4">Lihat Modul Lainnya &#10095;</button>
         </div>
+        {% for i in modul_pemasaran %}
+        <div class="col-md-3 modul-terbaru">
+            <div class="card" style="width: 15rem; height: 15rem;">
+
+                <img class="card-img-top" src="{% static 'img/banner1.png' %}" alt="Card image cap">
+                <div class="card-body">
+                  <p >{{ i.1 }}<br><br>Gratis</p>
+                </div>   
+            </div>
+        </div>
+        {% endfor %}
+    </div>
     </div>
 </div>
 <div class=" mt-5 program2">
+    <div class="container">
     <br>
     <div class="row">
         <div class="col-md-4 ml-3">
@@ -146,6 +211,18 @@
             <p>Ikuti kelas-kelas daring seputar topik manajemen operasional di LatihID. Dari dasar-dasar manajemen sumber daya manusia untuk UMKM, sampai cara membangun loyalitas pelanggan. Akses sekarang di sini.</p>
             <button class="button2 mb-4">Lihat Modul Lainnya &#10095;</button>
         </div>
+        {% for i in modul_manajemen %}
+        <div class="col-md-3 modul-terbaru">
+            <div class="card" style="width: 15rem; height: 15rem;">
+
+                <img class="card-img-top" src="{% static 'img/banner1.png' %}" alt="Card image cap">
+                <div class="card-body">
+                  <p >{{ i.1 }}<br><br>Gratis</p>
+                </div>   
+            </div>
+        </div>
+        {% endfor %}
+    </div>
     </div>
 </div>
 </div>
